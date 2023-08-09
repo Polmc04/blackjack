@@ -3,10 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.9.2/css/flag-icons.min.css"
+    />    
+    <title>BlackJack</title>
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="logo"> <span class="red">B</span>lack<span class="red">J</span>ack</h1>
+        <div class="balance-container">
+            <div class="wallet-container">
+                <i class='bx bx-wallet wallet'></i>
+            </div>
+            <span class="balance">469.33</span>
+            <span class="smoke">USD</span>
+        </div>
+        <div class="user-and-language-container">
+            <ul class="user-menu">
+                <li>
+                    <div class="user">
+                        <div class="user-pic-container">
+                            <img class="user-pic" src="https://avatars.akamai.steamstatic.com/1e83c44cdaab360366542a8f2a271c91c89ff233_full.jpg" alt="profile pic">
+                        </div>
+                        <div class="user-name">username</div>
+                        <i class='bx bx-chevron-down arrow-down' ></i>
+                    </div>
+                </li>
+                <div class="dropdown-menu-container">
+                    <div class="dropdown-arrow-div"></div>
+                    <ul class="dropdown">
+                        <li class="user-li">
+                            <i class='bx bxs-user-circle'></i>
+                            <span class="user-option">Profile</span>
+                        </li>
+                        <li class="user-li">
+                            <i class='bx bx-coin-stack' ></i>
+                            <span class="user-option">Affiliates</span>
+                        </li>
+                        <li class="user-li">
+                            <i class='bx bxs-log-out bx-rotate-180' ></i>
+                            <span class="user-option">Log out</span>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+            <ul class="language-menu">
+                <li>
+                    <div class="language-container">
+                        <span class="language">EN</span>
+                        <span class="fi fi-gb flag"></span>
+                        <i class='bx bx-chevron-down arrow-down' ></i>
+                    </div>
+                </li>
+                <div class="dropdown-menu-container">
+                    <div class="dropdown-arrow-div"></div>
+                    <ul class="dropdown">
+                        <li class="language-li">
+                            <span class="language">ES</span>
+                            <span class="fi fi-es flag"></span>
+                        </li>
+                        <li class="language-li">
+                            <span class="language">ES</span>
+                            <span class="fi fi-es flag"></span>
+                        </li>
+                        <li class="language-li">
+                            <span class="language">ES</span>
+                            <span class="fi fi-es flag"></span>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <main class="main">
+        <div class="top-winners-container">
+            <div class="top-winners-sub-container">
+                <h2>Top Winners</h2>
+                <table class="top-winners-table">
+                    <thead class="table-head">
+                        <tr>
+                            <th class="top-winners-username">Username</th>
+                            <th class="top-winners-games">Games played</th>
+                            <th class="top-winners-username">Payout</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <tr class="first-winner-row">
+                            <td class="first-winner winner">#1 Talico</td>
+                            <td class="first-winner-games winner-games">32</td>
+                            <td class="first-winner-payout payout">1000.00 <span class="smoke">USD</span></td>
+                        </tr>
+                        <tr class="second-winner-row">
+                            <td class="second-winner winner">#2 Micasa</td>
+                            <td class="second-winner-games winner-games">4</td>
+                            <td class="second-winner-payout payout">633.94 <span class="smoke">USD</span></td>
+                        </tr>
+                        <tr class="third-winner-row">
+                            <td class="third-winner winner">#3 Vertigo</td>
+                            <td class="third-winner-games winner-games">5</td>
+                            <td class="third-winner-payout payout">140.64 <span class="smoke">USD</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="cards-container">
+                <div class="counter-cards-container">
+                    <div class="counter-box">
+                        <div class="counter" id="dealer-counter">13</div>
+                        <div class="arrow-counter"></div>
+                    </div>
+                    <div class="dealer-cards cards">
+                        <img src="img/cards/card-2.png" alt="" class="dealer-card-img">
+                        <img src="img/cards/card-2.png" alt="" class="dealer-card-img">
+                        <img src="img/cards/card-2.png" alt="" class="dealer-card-img">
+                    </div>
+                </div>
+                <div class="timer-start">
+                    <button class="start">Play</button>
+                    <span class="timer">7.11s</span>
+                </div>
+                <div class="counter-cards-container">
+                    <div class="counter-box">
+                        <div class="counter" id="client-counter">4</div>
+                        <div class="arrow-counter"></div>
+                    </div>
+                    <div class="client-cards cards">
+                        <img src="img/cards/card-2.png" alt="" class="client-card-img">
+                        <img src="img/cards/card-2.png" alt="" class="client-card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="options-container">
+                <button class="double option">
+                    <i class='bx bx-x double'></i>
+                    <span class="double">double</span>    
+                </button>
+                <button class="stay option">
+                    <i class='bx bx-minus stay' ></i>
+                    <span class="stay">stay</span>
+                </button>
+                <button class="hit option">
+                    <i class='bx bx-cross hit'></i>
+                    <span class="hit">hit</span>    
+                </button>
+                <button class="split option">
+                    <i class='bx bx-expand-horizontal split' ></i>
+                    <span class="split">split</span>    
+                </button>
+            </div>
+        </div>
+        <div class="bet-container">
+            <div class="bet-sub-container">
+                <h2>Place Bet</h2>
+                <input type="text" min="0" max="10" placeholder="Introduce your bet" class="bet-amount">
+                <div class="bet-buttons">
+                    <button class="c-button button">
+                        <span class="c-button">C</span>
+                    </button>
+                    <button class="1/2-button button">
+                        <span class="1/2-span">1/2</span>
+                    </button>
+                    <button class="2x-button button">
+                        <span class="2x-span">2x</span>
+                    </button>
+                    <button class="0.1-button button">
+                        <span class="0.1-span">+0.1</span>
+                    </button>
+                    <button class="1-button button">
+                        <span class="1-span">+1</span>
+                    </button>
+                    <button class="10-button button">
+                        <span class="10-span">+10</span>
+                    </button>
+                    <button class="m-button button">
+                        <span class="m-span">M</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="about">
+            <ul class="footer-ul">
+                <li><a href="">Terms of use</a></li>
+                <li><a href="">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="links-container">
+            <a href="https://www.linkedin.com/in/pol-mir%C3%B3-865ba7247/" target="_blank">
+                <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="mailto:polmirocarreno@gmail.com" target="_blank">
+                <i class='bx bxl-gmail' ></i>
+            </a>
+            <a href="https://www.youtube.com/@pol8038" target="_blank">
+                <i class='bx bxl-youtube' ></i>
+            </a>
+            <a href="https://www.youtube.com/@pol8038" target="_blank">
+                <i class='bx bxl-discord-alt'></i>
+            </a>
+        </div>
+        <div class="legal">
+            <ul class="footer-ul">
+                <li><a href="">How to play</a></li>
+                <li><a href="">Fairness</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

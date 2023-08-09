@@ -1,0 +1,55 @@
+-----------------------------------------------Desarrollo---------------------------------------------
+hacer que siempre haya cartas ocupando el div para no deformar nada
+
+
+
+
+
+
+
+---------------------------------------------------Juego-------------------------------------------------
+
+Reglas BlackJack:
+
+Valores de las cartas: Las cartas numéricas (del 2 al 10) valen su valor nominal.
+Las cartas con figuras (J, Q, K) valen 10 puntos cada una. 
+El As (A) puede valer 1 u 11 puntos, dependiendo de cuál sea más beneficioso para la mano.
+
+Objetivo: El objetivo es obtener una mano que sume 21 puntos o acercarse lo más posible a esta cifra sin pasarse. 
+Si tu mano suma más de 21, pierdes automáticamente.
+
+El juego: Comienzas con dos cartas. Puedes ver ambas cartas, mientras que solo una de las cartas del crupier está boca arriba (la carta "visible"). 
+Puedes tomar más cartas ("pedir") o quedarte con las que tienes ("plantarte"). 
+El crupier debe seguir reglas predefinidas, generalmente tomando cartas hasta que alcance un total de al menos 17 puntos.
+
+Opciones de juego:
+
+Pedir (Hit): Solicitas una carta adicional para mejorar tu mano.
+Plantarte (Stand): Decides no pedir más cartas y te quedas con tu mano actual.
+Doblar (Double Down): Duplicas tu apuesta inicial y recibes una carta adicional. Luego, te plantas automáticamente.
+Dividir (Split): Si tienes dos cartas del mismo valor, puedes dividirlas en dos manos separadas. 
+Cada mano se juega con una carta adicional y se trata como una mano independiente.
+Ganar y perder:
+
+Si obtienes exactamente 21 puntos con las dos primeras cartas (un 10 y un As), tienes un "blackjack" y generalmente ganas automáticamente.
+Si sumas más puntos que el crupier sin pasarte de 21, ganas.
+Si te pasas de 21 puntos, pierdes, independientemente de la mano del crupier.
+Si tienes una mano con un valor menor que 21 pero mayor que el crupier, ganas.
+Si tienes una mano de igual valor que la del crupier, se considera empate o "push" y recuperas tu apuesta.
+
+------------------------------------------------------Probabilidades----------------------------------------------------------------
+
+https://www.youtube.com/watch?v=rO4SXmJOZsk&ab_channel=MathforAll
+
+--------------------------------------------------------Banderas---------------------------------------------------------------------
+
+https://www.iso.org/obp/ui/#search
+https://github.com/lipis/flag-icons/blob/main/README.md
+
+
+--------------------------------------------------------Estilos----------------------------------------------------------------------
+
+https://css-tricks.com/the-shapes-of-css/
+
+Para apilar cartas usar margin left negativo
+https://blackjack-miltoncodeyt.vercel.app/
