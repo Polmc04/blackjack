@@ -18,13 +18,13 @@
             <div class="wallet-container">
                 <i class='bx bx-wallet wallet'></i>
             </div>
-            <span class="balance">469.33</span>
+            <span class="balance" id="balance">469.33</span>
             <span class="smoke">USD</span>
         </div>
         <div class="user-and-language-container">
             <ul class="user-menu">
                 <li>
-                    <div class="user">
+                    <div class="user" id="user">
                         <div class="user-pic-container">
                             <img class="user-pic" src="https://avatars.akamai.steamstatic.com/1e83c44cdaab360366542a8f2a271c91c89ff233_full.jpg" alt="profile pic">
                         </div>
@@ -32,7 +32,7 @@
                         <i class='bx bx-chevron-down arrow-down' ></i>
                     </div>
                 </li>
-                <div class="dropdown-menu-container">
+                <div class="dropdown-menu-container none" id="dropdown-user">
                     <div class="dropdown-arrow-div"></div>
                     <ul class="dropdown">
                         <li class="user-li">
@@ -52,13 +52,13 @@
             </ul>
             <ul class="language-menu">
                 <li>
-                    <div class="language-container">
+                    <div class="language-container" id="language">
                         <span class="language">EN</span>
                         <span class="fi fi-gb flag"></span>
                         <i class='bx bx-chevron-down arrow-down' ></i>
                     </div>
                 </li>
-                <div class="dropdown-menu-container">
+                <div class="dropdown-menu-container none" id="dropdown-language">
                     <div class="dropdown-arrow-div"></div>
                     <ul class="dropdown">
                         <li class="language-li">
@@ -118,14 +118,13 @@
                         <div class="arrow-counter"></div>
                     </div>
                     <div class="dealer-cards cards">
-                        <img src="img/cards/card-2.png" alt="" class="dealer-card-img">
-                        <img src="img/cards/card-2.png" alt="" class="dealer-card-img">
-                        <img src="img/cards/card-2.png" alt="" class="dealer-card-img">
-                    </div>
+                        <img src="img/cards/card-hidden.png" alt="" class="client-card-img card-hidden">
+                        <img src="img/cards/card-hidden.png" alt="" class="client-card-img card-hidden">
+                   </div>
                 </div>
                 <div class="timer-start">
-                    <button class="start">Play</button>
-                    <span class="timer">7.11s</span>
+                    <button class="start" id="start">Play</button>
+                    <span class="timer" id="timer">7.11s</span>
                 </div>
                 <div class="counter-cards-container">
                     <div class="counter-box">
@@ -133,56 +132,58 @@
                         <div class="arrow-counter"></div>
                     </div>
                     <div class="client-cards cards">
-                        <img src="img/cards/card-2.png" alt="" class="client-card-img">
-                        <img src="img/cards/card-2.png" alt="" class="client-card-img">
+                        <img src="img/cards/card-hidden.png" alt="" class="client-card-img card-hidden">
+                        <img src="img/cards/card-hidden.png" alt="" class="client-card-img card-hidden">
                     </div>
                 </div>
             </div>
             <div class="options-container">
-                <button class="double option">
-                    <i class='bx bx-x double'></i>
-                    <span class="double">double</span>    
+                <button class="option" id="double">
+                    <i class='bx bx-x'></i>
+                    <span class="">double</span>    
                 </button>
-                <button class="stay option">
-                    <i class='bx bx-minus stay' ></i>
-                    <span class="stay">stay</span>
+                <button class="option" id="stay">
+                    <i class='bx bx-minus' ></i>
+                    <span class="">stay</span>
                 </button>
-                <button class="hit option">
-                    <i class='bx bx-cross hit'></i>
-                    <span class="hit">hit</span>    
+                <button class="option" id="hit">
+                    <i class='bx bx-cross'></i>
+                    <span class="">hit</span>    
                 </button>
-                <button class="split option">
-                    <i class='bx bx-expand-horizontal split' ></i>
-                    <span class="split">split</span>    
+                <button class="option" id="split">
+                    <i class='bx bx-expand-horizontal'></i>
+                    <span class="">split</span>    
                 </button>
             </div>
         </div>
         <div class="bet-container">
             <div class="bet-sub-container">
                 <h2>Place Bet</h2>
-                <input type="text" min="0" max="10" placeholder="Introduce your bet" class="bet-amount">
-                <div class="bet-buttons">
-                    <button class="c-button button">
-                        <span class="c-button">C</span>
-                    </button>
-                    <button class="1/2-button button">
-                        <span class="1/2-span">1/2</span>
-                    </button>
-                    <button class="2x-button button">
-                        <span class="2x-span">2x</span>
-                    </button>
-                    <button class="0.1-button button">
-                        <span class="0.1-span">+0.1</span>
-                    </button>
-                    <button class="1-button button">
-                        <span class="1-span">+1</span>
-                    </button>
-                    <button class="10-button button">
-                        <span class="10-span">+10</span>
-                    </button>
-                    <button class="m-button button">
-                        <span class="m-span">M</span>
-                    </button>
+                <div class="bet-inputs">
+                    <input name="bet" maxlength="10" min="0" max="10" placeholder="Introduce your bet" class="bet-amount" id="bet-amount">
+                    <div class="bet-buttons">
+                        <button class="c-button button" id="c-button">
+                            <span class="c-button">C</span>
+                        </button>
+                        <button class="1/2-button button" id="1/2-button">
+                            <span class="1/2-span">1/2</span>
+                        </button>
+                        <button class="2x-button button" id="2x-button">
+                            <span class="2x-span">2x</span>
+                        </button>
+                        <button class="0.1-button button" id="0.1-button">
+                            <span class="0.1-span">+0.1</span>
+                        </button>
+                        <button class="1-button button" id="1-button">
+                            <span class="1-span">+1</span>
+                        </button>
+                        <button class="10-button button" id="10-button">
+                            <span class="10-span">+10</span>
+                        </button>
+                        <button class="m-button button" id="m-button">
+                            <span class="m-span">M</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -215,6 +216,6 @@
             </ul>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

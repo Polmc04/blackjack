@@ -99,7 +99,7 @@ html{
 }
 body{
     min-height: 100vh;
-    min-width: 100dvh;
+    min-height: 100dvh;
     min-height: 100svh;
     width: 100%;
     background-color: var(--grey-background);
@@ -211,9 +211,6 @@ body{
     border-bottom: 10px solid #2a2635;
     z-index: 100;
 }
-.dropdown-menu-container{
-    display: none; /*---------------------------DROPDOWN------------------------*/
-}
 .dropdown{
     width: 100%;
     display: block;
@@ -221,6 +218,9 @@ body{
     border-radius: 4px;
     background-color: #2a2635;
     box-shadow: 0 1px 2px rgba(10,9,14,.3);
+}
+.none{
+    display: none;
 }
 .user-li{
     color: var(--white-ter);
@@ -243,8 +243,7 @@ body{
     border: transparent;
     border-radius: 8px;
     background-color: #2a2635;
-    padding-right: .5rem;
-    padding-left: .5rem;
+    padding: 0 .5rem;
     height: 34px;
     transition: background-color .15s ease-in-out;
     box-shadow: 0 1px 2px rgba(10,9,14,.3);
@@ -312,6 +311,7 @@ body{
     border-radius: 4px;
     transition: all .5s cubic-bezier(0,1,0,1);
     overflow: hidden;
+    margin: 0 auto;
 }
 table{
     font-size: 1rem;
@@ -406,7 +406,6 @@ td{
     flex: 2;
     display: flex;
     flex-wrap: nowrap;
-    min-height: 18vh;
 }
 .cards img{
     border: 1px solid #2c2737;
@@ -417,6 +416,9 @@ td{
 }
 .cards img:nth-of-type(1){
     margin-left: 0px;
+}
+.card-hidden{
+    margin-left: 5px!important;
 }
 .timer-start{
     display: flex;
@@ -520,6 +522,13 @@ button, input[type="submit"], input[type="reset"] {
     padding: 0.6rem;
     gap: 1rem;
 }
+.bet-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
 .bet-amount{
     background-color: #2b2837;
     border-radius: 4px;
@@ -529,18 +538,18 @@ button, input[type="submit"], input[type="reset"] {
     font-size: 1rem;
     font-weight: 500;
     margin: 0;
-    min-width: 10rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
 }
 .bet-amount::placeholder{
     color: var(--smoke);
 }
 .bet-buttons{
-    margin: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-flow: row wrap;
-    gap: .9rem;
+    width: 100%;
+    gap: 0.75rem;
 }
 .button{
     flex: 1;
@@ -552,7 +561,7 @@ button, input[type="submit"], input[type="reset"] {
     font-family: var(--font-mono);
     font-size: .9rem;
     font-weight: 600;
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.5rem;
 }
 .button:hover,
 .button:active,
@@ -568,9 +577,12 @@ button, input[type="submit"], input[type="reset"] {
 }
 .footer-ul{
     font-size: .8rem;
+    font-weight: 600;
 }
 .footer-ul li{
     margin-bottom: 5px;
+    color: var(--indigo-light);
+    transition: 0.5s ease;
     cursor: pointer;
 }
 .footer-ul li a{
@@ -580,9 +592,10 @@ button, input[type="submit"], input[type="reset"] {
 .footer-ul li a:active{
     color: var(--indigo-light);
 }
-.footer-ul li a:hover{
+.footer-ul li:hover,
+.footer-ul li:hover > *{
     color: var(--red);
-    transform: none;
+    transform: translate(0px, -1px);
 }
 .footer-ul li::before { /* add the new bullet point */
     display: inline-block;
@@ -602,9 +615,268 @@ button, input[type="submit"], input[type="reset"] {
     font-size: 1.05rem;
     color: var(--indigo-light);
     margin: 0 0.2rem;
+}
+.links-container a > *{
     transition: 0.5s ease;
 }
-.links-container a:hover{
+.links-container a:hover,
+.links-container a:hover > *{
     color: var(--red);
-    transform: translate(0px, -100px)!important;
+    transform: translate(0px, -1px);
+}
+
+/* customize scrollbar */
+::-webkit-scrollbar {
+    width: .5rem;
+    height: .5rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--smoke);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--white-ter);
+  }
+
+/*------------------------------------------------RESPONSIVE-----------------------------------*/
+
+/*--------------------------------1500px--------------------*/
+@media (max-width: 1500px) {
+    html{
+        font-size: 95%;
+    }
+    .header{
+        max-width: 65rem;
+    }
+    .main{
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .bet-container{
+        order: 1;
+    }
+    .bet-sub-container{
+        gap: .7rem;
+        padding: .5rem;
+    }
+    .bet-sub-container h2{
+        font-size: 1.45rem;
+    }
+    .button{
+        padding: 0.25rem 0.3rem;
+    }
+    .game-container{
+        order: 2;
+    }
+    .cards img{
+        max-width: 140px;
+    }
+    .top-winners-container{
+        order: 3;
+        min-width: 90vw;
+    }
+    .footer{
+        margin-top: 3rem;
+    }
+}
+/*--------------------------------1200px------------------------*/
+@media (max-width: 1200px) {
+    .header{
+        max-width: 60rem;
+    }
+}
+/*--------------------------------1000px------------------------*/
+@media (max-width: 1000px) {
+    .header{
+        max-width: 55rem;
+    }
+
+    .logo{
+        font-size: 2rem;
+    }
+
+    .user-and-language-container{
+        gap: 1rem;
+    }
+
+    .cards img{
+        max-width: 130px;
+        margin-left: -100px;
+    }
+}
+/*--------------------------------900px------------------------*/
+@media (max-width: 900px) {
+    html{
+        font-size: 90%;
+    }
+    .header{
+        max-width: 50rem;
+    }
+}
+/*--------------------------------800px------------------------*/
+@media (max-width: 800px) {
+    html{
+        font-size: 85%;
+    }
+    .footer{
+        margin-top: 4rem;
+    }
+}
+/*--------------------------------720px------------------------*/
+@media (max-width: 720px) {
+    .user{
+        padding: 0 .5rem;
+    }
+    .header{
+        max-width: 43rem;
+    }
+    .language-container{
+        padding: 0 .35rem;
+        padding-right: .25rem;
+    }
+    .language-li{
+        padding: 0.45rem 1.15rem;
+    }
+
+    .main{
+        margin-top: 1.5rem;
+    }
+
+    .bet-inputs{
+        flex-wrap: nowrap;
+    }
+    .bet-amount{
+        max-width: 11rem;
+        max-height: 2rem;
+    }
+    .bet-buttons{
+        flex-wrap: nowrap;
+        gap: 0.4rem;
+    }
+    .button{
+        padding: 0.5rem 0.75rem;
+    }
+
+    .cards img{
+        max-width: 120px;
+        margin-left: -100px;
+    }
+}
+/*--------------------------------620px------------------------*/
+@media (max-width: 620px) {
+    .header{
+        margin-top: 0.5rem;
+        max-width: 35rem;
+        height: 7rem;
+        flex-wrap: wrap;
+    }
+    .logo{
+        width: 40vw;
+    }
+    .user-and-language-container{
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .user-menu{
+        order: 2;
+    }
+    .language-menu{
+        order: 1;
+    }
+
+    .main{
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    .bet-sub-container {
+        gap: 0.5rem;
+    }
+    .bet-sub-container h2 {
+        font-size: 1.3rem;
+        padding: 0.35rem 0;
+    }
+    .bet-amount{
+        max-width: 9rem;
+    }
+    .button,
+    .bet-amount{
+        font-size: .8rem;
+    }
+    
+    .cards-container{
+        gap: 1.5rem;
+    }
+    .cards img{
+        max-width: 110px;
+        margin-left: -90px;
+    }
+    .timer-start{
+        font-size: 1.6rem;
+    }
+
+}
+/*--------------------------------520px------------------------*/
+@media (max-width: 520px){
+    .header{
+        max-width: 30rem;
+    }
+    .game-container{
+        gap: 2rem;
+    }
+
+    .bet-inputs{
+        gap: 0.5rem;
+    }
+    .button,
+    .bet-amount{
+        font-size: .75rem;
+    }
+    .button{
+        padding: .45rem .6rem;
+    }
+}
+/*--------------------------------450px------------------------*/
+@media (max-width: 450px){
+    .header{
+        max-width: 25rem;
+    }
+}
+/*--------------------------------380px------------------------*/
+@media (max-width: 380px){
+    html{
+        font-size: 80%;
+    }
+    .header{
+        max-width: 23rem;
+    }
+}
+/*--------------------------------360px------------------------*/
+@media (max-width: 360px){
+    .header{
+        max-width: 21rem;
+    }
+
+    .bet-inputs{
+        flex-wrap: wrap;
+    }
+    .bet-amount{
+        max-width: none;
+    }
+    .button {
+        padding: 0.4rem 0.5rem;
+    }
+    .cards img{
+        max-width: 100px;
+        margin-left: -80px;
+    }
 }

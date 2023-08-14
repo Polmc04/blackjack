@@ -1,6 +1,10 @@
 -----------------------------------------------Desarrollo---------------------------------------------
-hacer que siempre haya cartas ocupando el div para no deformar nada
-
+Imagenes:
+    Imagenes adaptadas CounterStrike
+Javascript:
+    Juego (generar cartas random, funcionalidades blackjack)
+CSS:
+    Borde cartas giratorio de los colores de la calidad de skins del csgo ordenado por número de carta
 
 
 
