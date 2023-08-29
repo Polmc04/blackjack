@@ -2,9 +2,17 @@
 Imagenes:
     Imagenes adaptadas CounterStrike
 Javascript:
-    Juego (generar cartas random, funcionalidades blackjack)
+    Hacer cuenta atrás
+    Ajustar Delays
+    Split
+    Insurance
+    Añadir sonido cartas
 CSS:
+    cuando uno de los dos gane poner el contador verde, el otro rojo, si empatan naranja los dos
+    Mostrar una barra de progreso para la cuenta atrás
+    Responsive movil contador y cartas
     Borde cartas giratorio de los colores de la calidad de skins del csgo ordenado por número de carta
+    Si una de las dos partes pierde que penten sus cartas como un c4
 
 
 
@@ -19,11 +27,11 @@ Valores de las cartas: Las cartas numéricas (del 2 al 10) valen su valor nomina
 Las cartas con figuras (J, Q, K) valen 10 puntos cada una. 
 El As (A) puede valer 1 u 11 puntos, dependiendo de cuál sea más beneficioso para la mano.
 
-Objetivo: El objetivo es obtener una mano que sume 21 puntos o acercarse lo más posible a esta cifra sin pasarse. 
+Objetivo: El objetivo es obtener una mano que sume 21 puntos o acercarse lo más posible a esta cifra sin pasarse.
 Si tu mano suma más de 21, pierdes automáticamente.
 
 El juego: Comienzas con dos cartas. Puedes ver ambas cartas, mientras que solo una de las cartas del crupier está boca arriba (la carta "visible"). 
-Puedes tomar más cartas ("pedir") o quedarte con las que tienes ("plantarte"). 
+Puedes tomar más cartas ("pedir") o quedarte con las que tienes ("plantarte").
 El crupier debe seguir reglas predefinidas, generalmente tomando cartas hasta que alcance un total de al menos 17 puntos.
 
 Opciones de juego:
